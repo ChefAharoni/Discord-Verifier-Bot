@@ -1,8 +1,8 @@
-import discord
-import os
-import requests
 import json
+import os
 import random
+import discord
+import requests
 from replit import db
 
 intents = discord.Intents.default()
@@ -19,6 +19,9 @@ sad_words = [
 starter_encouragements = [
     "Cheer up!", "Hang in there.", "You are a great person"
 ]
+
+if "responding" not in db:
+  db["responding"] = True
 
 
 def get_quote():
@@ -66,8 +69,46 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send(quote)
 
-  if any(word in message.content for word in sad_words):
-    await message.channel.send(random.choice(starter_encouragements))
+  if db["responding"]:
+    options = starter_encouragements
+    if "encouragements" in db:
+      options = options + list(db["encouragements"])
+
+    if any(word in message.content for word in sad_words):
+      await message.channel.send(random.choice(options))
+
+  if msg.startswith('$new'):
+    encouragement = msg.split("$new ", 1)[1]
+    update_encouragements(encouragement)
+    await message.channel.send("New encouraging message added.")
+
+  if msg.startswith('$del'):
+    encouragements = []
+    if "encouragements" in db:
+      # index = int(msg.split("$del", 1)[1])
+      try:
+        index = int(msg.split("$del", 1)[1].strip())
+        delete_encouragements(index)
+        encouragements = db["encouragements"]
+        await message.channel.send(encouragements)
+      except ValueError:
+        await message.channel.send("Invalid index for deletion.")
+
+  if msg.startswith("$list"):
+    encouragements = []
+    if "encouragements" in db:
+      encouragements = db["encouragements"]
+    await message.channel.send(encouragements)
+
+  if msg.starts_with("$responding"):
+    value = msg.split("$responding ", 1)[1]
+
+  if value.lower() == "true":
+    db["responding"] = True
+    await message.channel.send("Responding is on.")
+  else:
+    db["responding"] = False
+    await message.channel.send("Responding is off.")
 
 
 async def assign_role_to_member(member_id, role_id):
