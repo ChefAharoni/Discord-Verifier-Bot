@@ -30,7 +30,7 @@ with open("UUID/discord_emails.json") as file:
 combined_data = combine_data(discord_ids, discord_emails)
 
 # Save combined data to a JSON file
-with open("UUID/ids_emails_uuids.json", "w") as file:
+with open("UUID/users_data.json", "w") as file:
     json.dump(combined_data, file, indent=4)
 
 # Print to verify
