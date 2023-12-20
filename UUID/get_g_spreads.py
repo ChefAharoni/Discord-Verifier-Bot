@@ -14,17 +14,13 @@ sh = gc.open(
 
 def get_discord_ids():
     worksheet = sh.sheet1  # Define the worksheet
-    discord_ids = worksheet.col_values(3)[
-        1:
-    ]  # Get the values of the third column, excluding the first value (header)
+    discord_ids = [value for value in worksheet.col_values(3)[1:] if value]  # Get non-empty values of the third column
     return discord_ids
 
 
 def get_emails(discord_ids):
     worksheet = sh.sheet1  # Define the worksheet
-    emails = worksheet.col_values(5)[
-        1:
-    ]  # Get the values (emails) of the fifth column, excluding the first value (header)
+    emails = [value for value in worksheet.col_values(5)[1:] if value]  # Get non-empty values of the fifth column
     discord_emails = dict(zip(discord_ids, emails))
     return discord_emails
 
@@ -44,7 +40,7 @@ def save_emails_to_json(discord_emails):
 
 
 if __name__ == "__main__":
-    # save_discord_ids_to_json()
-    discod_ids = get_discord_ids()
-    discord_emails = get_emails(discod_ids)
+    discord_ids = get_discord_ids()
+    save_discord_ids_to_json(discord_ids)
+    discord_emails = get_emails(discord_ids)
     save_emails_to_json(discord_emails)
