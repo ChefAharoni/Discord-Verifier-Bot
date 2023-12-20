@@ -3,6 +3,7 @@ import os
 import requests
 import json
 import random
+from replit import db
 
 intents = discord.Intents.default()
 intents.members = True
@@ -25,6 +26,22 @@ def get_quote():
   json_data = json.loads(response.text)
   quote = json_data[0]['q'] + " -" + json_data[0]['a']
   return (quote)
+
+
+def update_encouragements(encouraging_message):
+  if "encouragements" in db:
+    encouragements = db["encouragements"]
+    encouragements.append(encouraging_message)
+    db["encouragements"] = encouragements
+  else:
+    db["encouragements"] = [encouraging_message]
+
+
+def delete_encouragements(index):
+  encouragements = db["encouragements"]
+  if len(encouragements) > index:
+    del encouragements[index]
+    db["encouragements"] = encouragements
 
 
 # Async library
