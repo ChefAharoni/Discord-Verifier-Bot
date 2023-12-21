@@ -27,6 +27,7 @@ def combine_data(discord_ids, discord_emails):
         dict: Dictionary mapping Discord IDs to a dictionary containing UUID and email.
     """
     combined_data = {}
+    user_uuid_map = generate_uuids_for_users(discord_ids)
     for discord_id in discord_ids:
         uuid = user_uuid_map[discord_id]
         email = discord_emails.get(discord_id)

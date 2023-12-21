@@ -19,23 +19,29 @@ def generate_unique_links(combined_data, base_url):
 
 
 # base_url = "https://hackcuny.com"  # The website domain
-base_url = "http://127.0.0.1:5000"  # Mock domain for testing
-
-users_data = load_from_json("UUID/users_data.json")  # Load the combined data
-unique_links = generate_unique_links(users_data, base_url)
+# base_url = "http://127.0.0.1:5000"  # Mock domain for testing (default Flask domain)
 
 
 # Save the updated data back to the JSON file
-def update_users_data():
+def update_users_data(users_data):
     with open("UUID/users_data.json", "w") as file:
         json.dump(users_data, file, indent=4)
 
 
-if __name__ == "__main__":
-    update_users_data()
+def generate_links(base_url):
+    users_data = load_from_json("UUID/users_data.json")  # Load the combined data
+    unique_links = generate_unique_links(users_data, base_url)
+    update_users_data(users_data)
 
-# for i in unique_links:
-#     print(i)
-#     print(unique_links[i])
-#     print()
-# print(unique_links)
+
+if __name__ == "__main__":
+    input_base_url = input("Enter the base URL: ")
+    if input_base_url == "":
+        base_url = "http://"
+    elif input_base_url.lower().startswith("local"):
+        base_url = "http://127.0.0.1:5000"
+    elif input_base_url.lower().startswith("hack"):
+        base_url = "https://hackcuny.com"
+    else:
+        base_url = input_base_url
+    generate_links(base_url)
