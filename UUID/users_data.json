@@ -1,122 +1,137 @@
 {
     "Nan1": {
-        "uuid": "1e2549bb-f8b2-4747-a503-99447a1a749d",
+        "uuid": "8201c1d6-9bab-4a16-9bd5-97dabe1412f6",
         "email": "mboumila@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=1e2549bb-f8b2-4747-a503-99447a1a749d"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=8201c1d6-9bab-4a16-9bd5-97dabe1412f6"
     },
     "Nan2": {
-        "uuid": "50ffb457-aa74-4689-9c54-cd6334826d52",
+        "uuid": "b989d76c-4372-4a1d-913e-eaafef0db512",
         "email": "elliot.radov@cix.csi.cuby.edu",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=50ffb457-aa74-4689-9c54-cd6334826d52"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=b989d76c-4372-4a1d-913e-eaafef0db512"
     },
     "Nan3": {
-        "uuid": "3f360485-58f7-4533-a35c-ea58acff9098",
+        "uuid": "a6912fa8-6047-4ba4-843a-d04c20198e63",
         "email": "igorgrygoriv1@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=3f360485-58f7-4533-a35c-ea58acff9098"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=a6912fa8-6047-4ba4-843a-d04c20198e63"
     },
     "Nan4": {
-        "uuid": "32c7a881-8e8c-45d4-a957-9a60bf4e5bba",
+        "uuid": "ecb709a6-2fc3-4a12-b759-6716ca37ba4e",
         "email": "Syraip4@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=32c7a881-8e8c-45d4-a957-9a60bf4e5bba"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=ecb709a6-2fc3-4a12-b759-6716ca37ba4e"
     },
     "Nan5": {
-        "uuid": "0ca64010-7752-4171-bc07-8bbd9bd88986",
+        "uuid": "60f8be7b-4e67-45ff-b8ac-02cdc8ce2964",
         "email": "jonathanyashayev11@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=0ca64010-7752-4171-bc07-8bbd9bd88986"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=60f8be7b-4e67-45ff-b8ac-02cdc8ce2964"
     },
     "Nan6": {
-        "uuid": "8029ccc1-f6d6-4dcd-b9fa-0027dd7cf3c4",
+        "uuid": "2e01f466-6e0e-4725-9086-6cc5803907d3",
         "email": "mehzabinfarin11@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=8029ccc1-f6d6-4dcd-b9fa-0027dd7cf3c4"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=2e01f466-6e0e-4725-9086-6cc5803907d3"
     },
     "Nan7": {
-        "uuid": "56657fca-597a-44fb-b554-6793013b6729",
+        "uuid": "ed7c4eae-ccf1-481a-b02f-7e7080482258",
         "email": "Smoses_1986@hotmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=56657fca-597a-44fb-b554-6793013b6729"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=ed7c4eae-ccf1-481a-b02f-7e7080482258"
     },
     "Nan8": {
-        "uuid": "8c883bd0-5e5d-4a1c-867f-5d24d52f6e47",
+        "uuid": "30584c85-d049-4134-b687-c59f2cd024d5",
         "email": "kchan440@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=8c883bd0-5e5d-4a1c-867f-5d24d52f6e47"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=30584c85-d049-4134-b687-c59f2cd024d5"
     },
     "Nan9": {
-        "uuid": "dd2217a6-1d6a-45a6-99be-236edcdc4cde",
+        "uuid": "45485622-975b-47fc-af5d-2b1087d39c07",
         "email": "rahmansabbirnsu@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=dd2217a6-1d6a-45a6-99be-236edcdc4cde"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=45485622-975b-47fc-af5d-2b1087d39c07"
     },
     ".remmy": {
-        "uuid": "d5704f2d-5808-4292-940f-6249e9e5c96d",
+        "uuid": "bf730691-cf52-4a08-88b6-84ff03ae490f",
         "email": "mboumila@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=d5704f2d-5808-4292-940f-6249e9e5c96d"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=bf730691-cf52-4a08-88b6-84ff03ae490f"
     },
     "Mahin#6367": {
-        "uuid": "6fd2e223-0130-4301-b232-de5b66b51830",
+        "uuid": "3b8438b5-625e-4eef-899e-9cf95324484e",
         "email": "mahinashraful08@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=6fd2e223-0130-4301-b232-de5b66b51830"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=3b8438b5-625e-4eef-899e-9cf95324484e"
     },
     "evandabest_": {
-        "uuid": "99f068fa-12bb-4c46-9672-b4fc714f9fa1",
+        "uuid": "1178168b-80e5-4c20-b593-aa8f166429f1",
         "email": "Evanhaque1@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=99f068fa-12bb-4c46-9672-b4fc714f9fa1"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=1178168b-80e5-4c20-b593-aa8f166429f1"
     },
     "cosmo6492": {
-        "uuid": "40f73944-fe43-4fec-bc6d-532497a5353f",
+        "uuid": "51618391-0112-4002-ae49-c220aac12151",
         "email": "f.e.dominguez157@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=40f73944-fe43-4fec-bc6d-532497a5353f"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=51618391-0112-4002-ae49-c220aac12151"
     },
     "laterr.": {
-        "uuid": "0b6029a1-e6f7-4cd6-b574-b9e6f8271eef",
+        "uuid": "c65b6857-1190-4c96-b7a2-31a71ed213dc",
         "email": "tanvirislamnyc@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=0b6029a1-e6f7-4cd6-b574-b9e6f8271eef"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=c65b6857-1190-4c96-b7a2-31a71ed213dc"
     },
     "zeny4074": {
-        "uuid": "d8a623a5-b260-43cd-a921-5c65e6efe53b",
+        "uuid": "23afe595-2c45-4384-85ef-3a7926435beb",
         "email": "kennethgonzalez067@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=d8a623a5-b260-43cd-a921-5c65e6efe53b"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=23afe595-2c45-4384-85ef-3a7926435beb"
     },
     "8et": {
-        "uuid": "5954fd04-dd1d-4245-a0aa-e826d9ef8f3b",
+        "uuid": "733d4506-9d81-40c9-87aa-0000e6378294",
         "email": "Jchowdh002@citymail.cuny.edu",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=5954fd04-dd1d-4245-a0aa-e826d9ef8f3b"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=733d4506-9d81-40c9-87aa-0000e6378294"
     },
     "ishmamf._64302": {
-        "uuid": "94e46ff9-7099-4413-b981-25d73aab24b1",
+        "uuid": "f9b60522-c7d2-4022-a466-b0065e5ad6da",
         "email": "ishmamf2003@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=94e46ff9-7099-4413-b981-25d73aab24b1"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=f9b60522-c7d2-4022-a466-b0065e5ad6da"
     },
     "prowler99": {
-        "uuid": "cc0540b5-1cc3-4709-bacc-36a3e7b0d38a",
+        "uuid": "badd52fe-4208-4088-887c-43d040da8398",
         "email": "Atiwari000@citymail.cuny.edu",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=cc0540b5-1cc3-4709-bacc-36a3e7b0d38a"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=badd52fe-4208-4088-887c-43d040da8398"
     },
     "Incoming": {
-        "uuid": "62b8547a-c60c-461b-9908-b2ecc6b68b29",
+        "uuid": "4e96daba-45ca-49aa-904b-e3f4ed5cad84",
         "email": "Allenz0509@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=62b8547a-c60c-461b-9908-b2ecc6b68b29"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=4e96daba-45ca-49aa-904b-e3f4ed5cad84"
     },
     "lemueldls": {
-        "uuid": "1d317e0b-86ee-4ae8-a383-618f49912d71",
+        "uuid": "c5e257d3-72cb-4eec-b9ca-773fc7fea55b",
         "email": "lemueldls@pm.me",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=1d317e0b-86ee-4ae8-a383-618f49912d71"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=c5e257d3-72cb-4eec-b9ca-773fc7fea55b"
     },
     "Tima662": {
-        "uuid": "6d87e0dc-1360-4232-976d-3606e0d039d2",
+        "uuid": "20e67d07-0005-4b34-9d04-ce81ae38a31f",
         "email": "temursayfutdinov3@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=6d87e0dc-1360-4232-976d-3606e0d039d2"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=20e67d07-0005-4b34-9d04-ce81ae38a31f"
     },
     "syraip4": {
-        "uuid": "a862dfbc-a82e-48c4-9022-3704589beb5d",
+        "uuid": "d52e579e-2f51-4fc1-a7bb-b2fd947f8bcd",
         "email": "Syraip4@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=a862dfbc-a82e-48c4-9022-3704589beb5d"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=d52e579e-2f51-4fc1-a7bb-b2fd947f8bcd"
     },
     "bubbles0_0": {
-        "uuid": "182c3df3-af33-4760-a441-7a8353a78c6d",
+        "uuid": "e21e44e7-3818-47cd-9852-5877b9c43e8b",
         "email": "tamanna.chowdhury610@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=182c3df3-af33-4760-a441-7a8353a78c6d"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=e21e44e7-3818-47cd-9852-5877b9c43e8b"
     },
     "ChefAharoni": {
-        "uuid": "3616be76-2264-4cb6-bc77-cea74898169b",
+        "uuid": "396a5692-9492-4a98-b51a-0dfc4336d2ab",
         "email": "amitaha29@gmail.com",
-        "unique_link": "https://hackcuny.com/assign_role?uuid=3616be76-2264-4cb6-bc77-cea74898169b"
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=396a5692-9492-4a98-b51a-0dfc4336d2ab"
+    },
+    "criznlzn": {
+        "uuid": "98c445c1-35ce-4844-8e32-8765ba75195a",
+        "email": "chrissgentile@gmail.com",
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=98c445c1-35ce-4844-8e32-8765ba75195a"
+    },
+    "naat1061": {
+        "uuid": "07a61667-0bb1-47a0-97b2-61b3adc65f07",
+        "email": "Janat.Yahya@jjay.cuny.edu ",
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=07a61667-0bb1-47a0-97b2-61b3adc65f07"
+    },
+    "vp.z": {
+        "uuid": "3a2e6ece-1bd3-47cb-9cf5-97c30d46027d",
+        "email": "vinny.pokorny@jjay.cuny.edu",
+        "unique_link": "http://127.0.0.1:5000/verify_user?uuid=3a2e6ece-1bd3-47cb-9cf5-97c30d46027d"
     }
 }
