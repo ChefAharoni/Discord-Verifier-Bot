@@ -20,3 +20,6 @@ def send_email(sender_email, sender_password, recipient_email, unique_link, disc
 
 # for discord_id, info in users_data.items():
 #     send_email("your_email@gmail.com", "your_password", info['email'], unique_links[discord_id])
+
+
+# verify@hackcuny.com
