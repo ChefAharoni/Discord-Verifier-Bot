@@ -100,15 +100,15 @@ async def on_message(message):
       encouragements = db["encouragements"]
     await message.channel.send(encouragements)
 
-  if msg.starts_with("$responding"):
+  if msg.startswith("$responding"):
     value = msg.split("$responding ", 1)[1]
 
-  if value.lower() == "true":
-    db["responding"] = True
-    await message.channel.send("Responding is on.")
-  else:
-    db["responding"] = False
-    await message.channel.send("Responding is off.")
+    if value.lower() == "true":
+      db["responding"] = True
+      await message.channel.send("Responding is on.")
+    else:
+      db["responding"] = False
+      await message.channel.send("Responding is off.")
 
 
 async def assign_role_to_member(member_id, role_id):
