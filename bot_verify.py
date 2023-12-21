@@ -5,7 +5,6 @@ import asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
 
-
 intents = discord.Intents.default()
 intents.members = True  # Enable intents for member information
 intents.messages = True  # Enable intents for message content
@@ -15,28 +14,31 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
+    """
+    Event handler that is triggered when the bot is connected to Discord.
+    """
     print(f"{bot.user.name} has connected to Discord!")
     bot.loop.create_task(check_verification_requests())
 
 
 async def check_verification_requests():
+    """
+    Asynchronous function that checks for verification requests and assigns roles to verified users.
+    """
     while True:
         try:
             with open("data_handling/verification_requests.json", "r") as vr_file:
-                # print("Opened verification_requests.json")
                 data = json.load(vr_file)
 
             with open("data_handling/assigned_roles.json", "r") as file:
-                # print("Opened assigned_roles.json")
                 assigned_roles = json.load(file)
 
-        except (FileNotFoundError, json.JSONDecodeError):
+        except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Error reading the JSON file: {e}")
             data = {}
             assigned_roles = {}
 
         for username, info in data.items():
-            # print(username)
             if (
                 info["verified"] and username not in assigned_roles
             ):  # Check if the user has visited the link, and if the role has been assigned
@@ -46,18 +48,26 @@ async def check_verification_requests():
                     with open("data_handling/assigned_roles.json", "w") as ar_file:
                         json.dump(assigned_roles, ar_file, indent=4)
             else:
-                # print(f"Failed to assign role to {username}")
+                # print(f"Failed to assign role to {username}") # Not printing this since it will print all the unverified users, all the time
                 pass
 
         # except Exception as e:
         #     print(f"An error occurred: {e}")
 
-        await asyncio.sleep(
-            10
-        )  # Check every 60 seconds (currently 10 seconds for testing, later change so server wouldn't crash)
+        await asyncio.sleep(60)  # Check every 60 seconds
 
 
 async def assign_role(username, role_name):
+    """
+    Asynchronous function that assigns a role to a member in the guild.
+
+    Parameters:
+    - username (str): The username of the member to assign the role to.
+    - role_name (str): The name of the role to assign.
+
+    Returns:
+    - bool: True if the role was successfully assigned, False otherwise.
+    """
     guild = bot.guilds[0]  # Assuming the bot is part of one guild
     member = discord.utils.find(lambda m: m.name == username, guild.members)
     if member:
