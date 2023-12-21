@@ -13,23 +13,48 @@ sh = gc.open(
 
 
 def get_discord_ids():
+    """
+    Get the Discord IDs from the Google Sheets.
+
+    Returns:
+        list: A list of Discord IDs.
+    """
     worksheet = sh.sheet1  # Define the worksheet
-    discord_ids = [value for value in worksheet.col_values(3)[1:] if value]  # Get non-empty values of the third column
+    discord_ids = [
+        value for value in worksheet.col_values(3)[1:] if value
+    ]  # Get non-empty values of the third column
     return discord_ids
 
 
 def get_emails(discord_ids):
+    """
+    Retrieves the emails associated with the given Discord IDs.
+
+    Args:
+        discord_ids (list): A list of Discord IDs.
+
+    Returns:
+        dict: A dictionary mapping Discord IDs to their associated emails.
+    """
     worksheet = sh.sheet1  # Define the worksheet
-    emails = [value for value in worksheet.col_values(5)[1:] if value]  # Get non-empty values of the fifth column
+    emails = [
+        value for value in worksheet.col_values(5)[1:] if value
+    ]  # Get non-empty values of the fifth column
     discord_emails = dict(zip(discord_ids, emails))
     return discord_emails
 
 
-# print(discord_ids)
-
-
 # Save discord_ids to a JSON file
 def save_discord_ids_to_json(discord_ids):
+    """
+    Save the given discord IDs to a JSON file.
+
+    Args:
+        discord_ids (list): A list of discord IDs to be saved.
+
+    Returns:
+        None
+    """
     with open("UUID/discord_ids.json", "w") as file:
         json.dump(discord_ids, file, indent=4)
 
@@ -39,8 +64,12 @@ def save_emails_to_json(discord_emails):
         json.dump(discord_emails, file, indent=4)
 
 
-if __name__ == "__main__":
+def get_google_spreads_data():
     discord_ids = get_discord_ids()
     save_discord_ids_to_json(discord_ids)
     discord_emails = get_emails(discord_ids)
     save_emails_to_json(discord_emails)
+
+
+if __name__ == "__main__":
+    get_google_spreads_data()
