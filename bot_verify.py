@@ -22,44 +22,52 @@ async def on_ready():
 async def check_verification_requests():
     while True:
         try:
-            with open("data_handling/verification_requests.json", "r") as file:
-                data = json.load(file)
+            with open("data_handling/verification_requests.json", "r") as vr_file:
+                # print("Opened verification_requests.json")
+                data = json.load(vr_file)
 
-            for username, info in data.items():
-                # print(f"Checking {username}")
-                # print(info["verified"])
-                if info["verified"]:  # Check if the user has visited the link
-                    print(f"Attempting to assign role to {username}")
-                    await assign_verified_role(username)
-                else:
-                    # print(f"Failed to assign role to {username}")
-                    pass
+            with open("data_handling/assigned_roles.json", "r") as file:
+                # print("Opened assigned_roles.json")
+                assigned_roles = json.load(file)
 
-        except (FileNotFoundError, json.JSONDecodeError) as e:
+        except (FileNotFoundError, json.JSONDecodeError):
             print(f"Error reading the JSON file: {e}")
-        except Exception as e:
-            print(f"An error occurred: {e}")
+            data = {}
+            assigned_roles = {}
+
+        for username, info in data.items():
+            # print(username)
+            if (
+                info["verified"] and username not in assigned_roles
+            ):  # Check if the user has visited the link, and if the role has been assigned
+                print(f"Attempting to assign role to {username}")
+                if await assign_role(username, "Verified"):
+                    assigned_roles[username] = True
+                    with open("data_handling/assigned_roles.json", "w") as ar_file:
+                        json.dump(assigned_roles, ar_file, indent=4)
+            else:
+                # print(f"Failed to assign role to {username}")
+                pass
+
+        # except Exception as e:
+        #     print(f"An error occurred: {e}")
 
         await asyncio.sleep(
             10
         )  # Check every 60 seconds (currently 10 seconds for testing, later change so server wouldn't crash)
 
 
-async def assign_verified_role(username):
+async def assign_role(username, role_name):
     guild = bot.guilds[0]  # Assuming the bot is part of one guild
     member = discord.utils.find(lambda m: m.name == username, guild.members)
-    print("test line 1")
     if member:
-        print("test line 2")
-        print(member)
-        role = discord.utils.get(guild.roles, name="Verified")
+        print(f"Found member {member.name}")
+        role = discord.utils.get(guild.roles, name=role_name)
         if role:
-            # await member.add_roles(role)
-            # print(f"Assigned 'verified' role to {member.name}")
-            print("Role found")
+            print(f"Role {role} found")
             try:
                 await member.add_roles(role)
-                print(f"Assigned 'verified' role to {member.name}")
+                print(f"Successfully assigned {role} role to {member.name}")
                 return True
             except Exception as e:
                 print(f"Error assigning role: {e}")
