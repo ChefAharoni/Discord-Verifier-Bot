@@ -84,6 +84,9 @@ def combine_ids_and_emails():
 
 
 def print_combined_data():
+    """
+    Prints the combined data from the 'users_data.json' file.
+    """
     with open("UUID/users_data.json") as file:
         combined_data = json.load(file)
     print(combined_data)

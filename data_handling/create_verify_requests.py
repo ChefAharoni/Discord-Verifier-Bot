@@ -14,6 +14,13 @@ verification_requests = {}
 
 # Process each user entry
 def process_user_entry(users_data):
+    """
+    Process user entries and creates verification requests for each user.
+    Used for tracking whether a user has visited their unique link.
+
+    Args:
+        users_data (dict): A dictionary containing user data, where the keys are Discord IDs and the values are user information.
+    """
     for discord_id, user_info in users_data.items():
         verification_requests[discord_id] = {
             "uuid": user_info["uuid"],
@@ -30,6 +37,10 @@ def save_verification_requests():
 
 
 def generate_verify_requests():
+    """
+    Main function of the module.
+    Generates verification requests JSON file for users based on their users data (Discord ID & UUID).
+    """
     users_data = load_users_data()
     process_user_entry(users_data)
     save_verification_requests()

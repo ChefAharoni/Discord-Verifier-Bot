@@ -60,11 +60,24 @@ def save_discord_ids_to_json(discord_ids):
 
 
 def save_emails_to_json(discord_emails):
+    """
+    Save the given list of Discord emails to a JSON file.
+
+    Parameters:
+    discord_emails (list): A list of Discord emails.
+    """
     with open("UUID/discord_emails.json", "w") as file:
         json.dump(discord_emails, file, indent=4)
 
 
 def get_google_spreads_data():
+    """
+    Retrieves data from Google Spreadsheets. Main function of the module.
+
+    This function fetches Discord IDs, saves them to a JSON file,
+    retrieves Discord emails using the Discord IDs, and saves them
+    to another JSON file.
+    """
     discord_ids = get_discord_ids()
     save_discord_ids_to_json(discord_ids)
     discord_emails = get_emails(discord_ids)
@@ -72,4 +85,5 @@ def get_google_spreads_data():
 
 
 if __name__ == "__main__":
+    
     get_google_spreads_data()
