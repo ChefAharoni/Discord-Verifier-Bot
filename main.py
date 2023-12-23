@@ -1,5 +1,5 @@
 from UUID import get_g_spreads, generate_ids
-from data_handling import link_generator
+from data_handling import link_generator, generate_verify_requests
 
 base_url = "https://hackcuny.com"  # The website domain for the unique links
 
@@ -8,6 +8,7 @@ def main():
     get_g_spreads.get_google_spreads_data()
     generate_ids.combine_ids_and_emails()
     link_generator.generate_links(base_url)
+    generate_verify_requests.generate_verify_requests()
 
 
 if __name__ == "__main__":
