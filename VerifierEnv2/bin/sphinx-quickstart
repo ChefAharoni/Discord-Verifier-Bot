@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/amitaharoni/Library/CloudStorage/Dropbox/03. Main Personal/01. Knowledge, Courses & School/06. CUNY - BMCC/04. Spring Semester 2024/F. Hackathon/Discord/Discord-Verifier-Bot/VerifierEnv2/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from sphinx.cmd.quickstart import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
